@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-     <Formulario></Formulario>
+ <h1>Aqui el perfil</h1>
  
   </div>
 
