@@ -3,7 +3,7 @@
 <div class="card-main">
     <div
      class="imagen-main">
-        <img src="@/assets/rie1.jpg" alt="">
+        <img :src="require(`@/assets/rie${likes}.jpg`)" alt="">
           <div class="conten-cuadrado">
     </div>
     </div>
@@ -35,9 +35,7 @@
 
 export default {
 
-props:{
-      likes: Number,
-},
+props:['likes'],
   data() {
     return {
        name: 'home',

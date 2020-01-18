@@ -8,7 +8,8 @@
 <div class="grid-conten"> 
    <div 
      v-for="(item, index) in lengtn" :key="index"  class="about">
-      <Card :likes="0"></Card>
+
+      <Card :likes="index"></Card>
   </div>
 }
   </div>
