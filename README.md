@@ -1,5 +1,12 @@
 # testbit
 
+
+En este proyecto utilice  VueJs con el VueCli
+
+
+node V13.5.0
+
+
 ## Project setup
 ```
 npm install
