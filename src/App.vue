@@ -1,57 +1,73 @@
 <template>
-  <div id="app">
-     <div id="nav">
-   
-<router-link to="/"> <span class="navegacion"></span>
-       <div class="">
-           <button>Inicio</button>
-       </div>
-       </router-link> 
+<div id="app">
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
      
-     <div>
+    >
+      <div class="d-flex ">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
 
-       Tienda Bictia Colombia
+     
+
+     
+      </div>
+   
+        <v-btn  justify-align-center text-xs-center>  
+          <router-link to="/"> 
+                  <div class="">
+                  Inicio
+                  </div>
+          </router-link>
+          </v-btn>
+
+
+
+          <v-btn  justify-align-center text-xs-center>  
+         <router-link to="/perfil">
+                  <div class="">
+                  Perfil
+                  </div>
+          </router-link>
+          </v-btn>
+    
+      <v-spacer></v-spacer>
+
+ 
+    </v-app-bar>
+
+    <v-content>
+     <div id="nav">
+        <router-view/>
      </div>
+    </v-content>
+  </v-app>
 
-    </div> 
 
-
-    <router-view/>
-  </div>
+</div> 
 </template>
 
-<style lang="scss">
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0; 
-}
-#nav{
-  font-family: 'Poppins', sans-serif;
-  background: #A030F0;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  padding: 23px;
+<script>
+import HelloWorld from './components/HelloWorld';
 
-  }
+export default {
+  name: 'App',
 
-  button{
-        
-      width: 89px;
-      height: 37px;
-      border: 1px solid #FFF;
-      border-radius: 24px;
-      border:none;
-      color:white;
-    background: #faebd74d;
-    cursor: pointer;
-      
-  }
+  components: {
+    HelloWorld,
+  },
 
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
